@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="mdc-typography">
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Am I Vulnerable? &ndash; Sonatype</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="node_modules/material-components-web/dist/material-components-web.css">
+    <script src="https://use.fontawesome.com/68deeed567.js"></script>
+		<style>
+      body {
+        margin: 0;
+        background-color: #ffc800;
+        /* Success color */
+        /*background-color: #b4ff00;*/
+      }
+
+      .mdc-toolbar {
+        padding: 0 2em;
+      }
+
+      .mdc-toolbar a {
+        top: 6px;
+        position: relative;
+      }
+
+      .mdc-toolbar .breadcrumb a {
+        color: #ffffff;
+        top: 0;
+        text-decoration: none;
+      }
+
+      .mdc-toolbar .sonatype-logo {
+        width: 112px;
+        margin-left: 2px;
+      }
+
+      .mdc-toolbar .amivulnerable-logo {
+        width: 100px;
+        padding: 1em 0;
+      }
+
+      .mdc-layout-grid {
+        text-align: center;
+      }
+
+      #notify-form .mdc-textfield {
+        margin-top: 0;
+        width: 300px;
+      }
+
+      #notify-form #submit-button {
+        margin-left: 1em;
+      }
+    </style>
+  </head>
+	<body>
+    <header class="mdc-toolbar mdc-elevation--z4">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <span class="mdc-typography--body2 breadcrumb">
+            <a href="index.html"><i class="fa fa-chevron-left"></i> Upload another file</a>
+          </span>
+        </section>
+        <section class="mdc-toolbar__section">
+          <span class="mdc-typography--body2"><img src="images/amivulnerable.png" class="amivulnerable-logo" alt="Am I Vulnerable?"/></span>
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+          <span class="mdc-toolbar__title mdc-typography--body2">Powered by
+          <a href="http://www.sonatype.com" target="_blank"><img src="images/sonatype.png" class="sonatype-logo" alt="Sonatype"/></a></span>
+        </section>
+    </header>
+    <main>
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <h1 class="mdc-typography--display3"><i class="fa fa-exclamation-triangle"></i> Yes, junit-4.10.jar is vulnerable</h1>
+            <p class="mdc-typography--headline">Software ages like <big>🥛</big>, not <big>🍷</big>. Get alerted when we discover new problems with this component.</p>
+            
+            <form action="#" id="notify-form">
+              <div class="mdc-form-field">
+                <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
+                  <input type="text" id="email" class="mdc-textfield__input">
+                  <label class="mdc-textfield__label" for="email">Your email</label>
+                </div>
+              </div>
+              <button type="submit"
+                      id="submit-button"
+                      class="mdc-button
+                             mdc-button--raised
+                             mdc-button--primary
+                             mdc-ripple-surface"
+                      data-mdc-auto-init="MDCRipple">
+                  <i class="fa fa-envelope"></i> Get alerted
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+    <script>mdc.autoInit()</script>
+  </body>
+</html>

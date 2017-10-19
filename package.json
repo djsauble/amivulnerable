@@ -1,0 +1,15 @@
+{
+  "name": "ahc_2_0",
+  "version": "1.0.0",
+  "description": "Redesign of our popular Application Health Check tool",
+  "main": "index.html",
+  "dependencies": {
+    "material-components-web": "^0.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Sauble <djsauble@gmail.com> (http://www.danielsauble.com)",
+  "license": "ISC"
+}
